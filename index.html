@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>个人简历 | 范烁</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: radial-gradient(circle at top, #1b1f3b, #0b0e1a);
+    color: #e6e6e6;
+}
+
+/* ===== 导航栏 ===== */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(10, 12, 30, 0.85);
+    backdrop-filter: blur(12px);
+    z-index: 1000;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.6);
+}
+
+nav {
+    max-width: 1300px;
+    margin: auto;
+    padding: 16px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav h1 {
+    font-size: 22px;
+    color: #7aa2ff;
+    letter-spacing: 1px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav li {
+    margin-left: 30px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #cfcfff;
+    font-size: 15px;
+}
+
+nav a:hover {
+    color: #7aa2ff;
+}
+
+/* ===== 通用区域 ===== */
+section {
+    max-width: 1300px;
+    margin: auto;
+    padding: 100px 40px;
+}
+
+section h2 {
+    font-size: 26px;
+    margin-bottom: 35px;
+    color: #7aa2ff;
+    border-left: 5px solid #7aa2ff;
+    padding-left: 15px;
+}
+
+/* ===== 首页 ===== */
+.hero {
+    padding-top: 160px;
+    text-align: center;
+}
+
+.hero h3 {
+    font-size: 38px;
+    margin-bottom: 14px;
+}
+
+.hero p {
+    max-width: 760px;
+    margin: auto;
+    font-size: 18px;
+    color: #bfc4ff;
+}
+
+/* ===== 卡片 ===== */
+.card {
+    background: rgba(255, 255, 255, 0.06);
+    border-radius: 20px;
+    padding: 32px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.4);
+    transition: transform .3s, box-shadow .3s;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 60px rgba(0,0,0,0.6);
+}
+
+/* ===== 基本信息 ===== */
+.profile {
+    display: flex;
+    gap: 60px;
+    align-items: center;
+}
+
+.avatar {
+    width: 260px;
+    height: 340px;
+    border-radius: 22px;
+    overflow: hidden;
+    background: linear-gradient(135deg, #3a4edb, #6f42c1);
+    flex-shrink: 0;
+}
+
+.avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.info {
+    flex: 1;
+}
+
+.info p {
+    margin-bottom: 12px;
+    font-size: 16px;
+}
+
+.info span {
+    font-weight: bold;
+    color: #ffffff;
+}
+
+/* ===== 视频展示（竖屏） ===== */
+.video-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.video-box {
+    width: 320px;        /* 竖屏宽度 */
+    height: 570px;       /* 9:16 比例 */
+    border-radius: 26px;
+    overflow: hidden;
+    background: #000;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.7);
+}
+
+.video-box video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* ===== 网格 ===== */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 30px;
+}
+
+/* ===== 时间线 ===== */
+.timeline {
+    border-left: 3px solid #7aa2ff;
+    padding-left: 30px;
+}
+
+.timeline-item {
+    margin-bottom: 26px;
+}
+
+.timeline-item h4 {
+    margin-bottom: 8px;
+    font-size: 18px;
+    color: #fff;
+}
+
+/* ===== 页脚 ===== */
+footer {
+    text-align: center;
+    padding: 40px;
+    font-size: 14px;
+    color: #888;
+}
+
+/* ===== 响应式 ===== */
+@media (max-width: 900px) {
+    .profile {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<nav>
+    <h1>范烁 · 简历</h1>
+    <ul>
+        <li><a href="#home">首页</a></li>
+        <li><a href="#info">基本信息</a></li>
+        <li><a href="#show">个人风采</a></li>
+        <li><a href="#award">获奖情况</a></li>
+        <li><a href="#experience">实习经历</a></li>
+    </ul>
+</nav>
+</header>
+
+<section id="home" class="hero">
+<h3>个人简历</h3>
+<p>
+热爱 FPS 竞技游戏，专注战术理解与团队协作，
+将数据分析思维应用于游戏策略研究与赛事复盘。
+</p>
+</section>
+
+<section id="info">
+<h2>基本信息</h2>
+<div class="profile card">
+    <div class="avatar">
+        <img src="1.jpg" alt="个人照片">
+    </div>
+    <div class="info">
+        <p><span>姓名：</span>范烁</p>
+        <p><span>性别：</span>男</p>
+        <p><span>专业：</span>数据科学与大数据技术</p>
+        <p><span>学校：</span>大连海洋大学</p>
+        <p><span>政治面貌：</span>共青团员</p>
+        <p><span>联系电话：</span>1234567890</p>
+    </div>
+</div>
+</section>
+
+<section id="show">
+<h2>个人风采展示</h2>
+<div class="video-wrapper">
+    <div class="video-box">
+        <video src="2.mp4" controls muted></video>
+    </div>
+</div>
+</section>
+
+<section id="award">
+<h2>获奖情况</h2>
+<div class="grid">
+    <div class="card">VALORANT 高校联赛 全国赛 八强</div>
+    <div class="card">瓦洛兰特 校园杯 FPS 项目 冠军</div>
+    <div class="card">多赛季 VALORANT 排位 最高段位：赋能</div>
+    <div class="card">校级电竞社 VALORANT 分部 主力成员</div>
+    <div class="card">线上赛事多次获得 MVP 表现</div>
+</div>
+</section>
+
+<section id="experience">
+<h2>实习 / 游戏相关经历</h2>
+<div class="timeline card">
+    <div class="timeline-item">
+        <h4>高校电竞赛事执行</h4>
+        <p>负责赛事流程协助、战队对接及比赛数据整理。</p>
+    </div>
+    <div class="timeline-item">
+        <h4>VALORANT 战队训练分析</h4>
+        <p>参与战术复盘，统计击杀、胜率与地图数据。</p>
+    </div>
+    <div class="timeline-item">
+        <h4>游戏内容剪辑与发布</h4>
+        <p>制作比赛集锦视频，用于短视频平台传播。</p>
+    </div>
+</div>
+</section>
+
+<footer>
+© 2025 范烁 · 个人简历网站
+</footer>
+
+</body>
+</html>
